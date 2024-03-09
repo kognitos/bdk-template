@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  Publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Source Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Setup Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
+    - name: Install Python Poetry
+      uses: abatilo/actions-poetry@v2
+      with:
+        poetry-version: 1.8
+    - name: Configure Poetry
+      shell: bash
+      run: |
+        python -m poetry config virtualenvs.in-project true
+        python -m poetry config virtualenvs.create true
+    - name: View poetry version
+      run: poetry --version
+    - name: Install dependencies
+      run: |
+        python -m poetry install
+    - name: Test
+      run: |
+        python -m poetry run tests
+    - name: Semantic Release
+      id: semantic
+      uses: cycjimmy/semantic-release-action@v4
+      with:
+        branches: |
+          main
+        extra_plugins: |
+          conventional-changelog-conventionalcommits@8
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

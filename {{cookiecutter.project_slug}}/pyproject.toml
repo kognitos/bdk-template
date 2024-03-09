@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.initial_version }}"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author_name }}"]
+readme = "README.md"
+packages = [{include = "{{ cookiecutter.project_slug }}", from="src"}]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+requests = "^2.31.0"
+kognitos-bdk-api = "^1.13"
+kognitos-bdk-klang = "^2.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+mypy = "^1.8.0"
+isort = "^5.13.2"
+black = "^24.2.0"
+pylint = "^3.2.0"
+pyright = "^1.1.360"
+requests-mock = "^1.11.0"
+kognitos-bdk-poetry-plugin = "^1.3"
+kognitos-bdk-linter = "^1.12"
+
+[removed_dev_dependencies]
+boto3 = "^1.34.139"
+
+[tool.poetry.scripts]
+tests = "poetry_scripts:run_tests"
+format = "poetry_scripts:run_format"
+lint = "poetry_scripts:run_lint"
+type-check = "poetry_scripts:run_type_check"
+doc = "poetry_scripts:run_doc"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+include = ["data/*"]
+
+[tool.pylint.MAIN]
+py-version = "3.11"
+load-plugins = ["kognitos.bdk.linter"]
+
+[tool.pylint.messages_control]
+disable = [
+    "line-too-long",
+    "redefined-outer-name",
+    "too-few-public-methods",
+    "too-many-instance-attributes",
+    "duplicate-code",
+    "too-many-public-methods",
+    "too-many-lines"
+]
+
+[tool.poetry.plugins."kognitos-book"]
+{{ cookiecutter.project_slug }} = "{{ cookiecutter.project_slug }}.book:{{ cookiecutter.__book_class_name }}"

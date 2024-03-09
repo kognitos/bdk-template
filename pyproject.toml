@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "kognitos-bdk-template"
+version = "0.2.0"
+description = "A cookiecutter template for developing Kognitos Books"
+authors = ["Emiliano Lesende <emiliano@kognitos.com>"]
+readme = "README.md"
+package-mode = false
+packages = [{include = "*.py", from="."}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+pylint = "^3.2.0"
+cookiecutter = "^2.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+isort = "^5.13.2"
+black = "^24.2.0"
+pre-commit = "^3.6.2"
+twine = "^5.0.0"
+kognitos-bdk-api = "^1.12"
+kognitos-bdk-linter = "^1.12"
+kognitos-bdk-klang = "^2.2"
+
+[tool.poetry.scripts]
+tests = 'poetry_scripts:run_tests'
+format = 'poetry_scripts:run_format'
+lint = 'poetry_scripts:run_lint'
+
+[build-system]
+requires = ["python>=3.11", "poetry-core"]
+build-backend = "poetry.core.masonry.api"
