@@ -111,7 +111,7 @@ class {{ cookiecutter.__book_class_name }}:
         Example 2:
             Retrieve the current temperature at London in Celsius
 
-            >>> get the current temperature at Buenos Aires with
+            >>> get the current temperature at New York with
             ...     the unit is metric
         """
         complete_url = f"{self._base_url}?appid={self._api_key}&q={quote(str(city))}&units={str(unit) if unit else 'metric'}"
