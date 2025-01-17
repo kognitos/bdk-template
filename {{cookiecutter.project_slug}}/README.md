@@ -8,31 +8,13 @@
 Before you begin, ensure you have the following installed on your system:
 
 ### Python 3.11
-The project is developed with Python 3.11. We recommend using Pyenv to manage your Python versions.
-
-To manage Python 3.11 with Pyenv, follow these steps:
-
-#### Install Pyenv
-If you haven't installed Pyenv yet, you can find the installation instructions on the Pyenv GitHub page. The 
-installation process varies depending on your operating system.
-
-#### Install Python 3.11
-Once Pyenv is installed, you can install Python 3.11 using the following command:
-
-```shell
-pyenv install 3.11
-```
+The project is developed with Python 3.11. You can use [pyenv](https://github.com/pyenv/pyenv), [homebrew](https://formulae.brew.sh/formula/python@3.11), [apt](https://linuxcapable.com/how-to-install-python-3-11-on-ubuntu-linux/), or [manual installation](https://www.python.org/downloads/).
  
 ### Poetry
-Poetry is used for dependency management and packaging in this project. 
+Poetry is used for dependency management and packaging in this project. You can find the installation guide [here](https://python-poetry.org/docs/).
 
-#### Install Poetry
-Run the following command to install Poetry:
-
-```shell
-curl -sSL https://install.python-poetry.org | python3 -
-```
-#### [Configure Poetry](https://python-poetry.org/docs/configuration/#virtualenvsin-project) to create the virtual environment inside the project’s root directory:
+### Configure Poetry
+Once poetry is installed, [configure poetry](https://python-poetry.org/docs/configuration/#virtualenvsin-project) to create the virtual environment inside the project’s root directory, by running this:
 
 ```Text CLI
 poetry config virtualenvs.in-project true
@@ -53,9 +35,22 @@ Use Poetry to install all required dependencies in an isolated environment.
 
 ```shell
 poetry env use 3.11
-poetry shell
 poetry install
 ```
+
+### Activate the virtual environment
+
+There are many ways of doing this, depending on your poetry version.
+
+- Running `poetry shell`
+
+or
+
+- Manually activating the venv:
+  ```
+  source <path_to_your_venv>/bin/activate
+  ```
+    If the venv was created locally in-project, run `source .venv/bin/activate`. Otherwise, look at where the env was created when you ran `poetry env use 3.11`.
 
 ## Running Tests
 This book uses Pytest as its test runner. You can execute it using the following command:
