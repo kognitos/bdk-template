@@ -38,7 +38,7 @@ Enter, or you can provide your own.
 
 The following options are available when generating a project from this template:
 
-* *project_name*: The name of your project (default: "My Python Project").
+* *project_name*: The name of your project (default: "Sample Book").
 * *project_slug*: A URL-friendly version of the project name, usually derived automatically from the project name.
 * *project_description*: A short description of your project.
 * *author_name*: Your (or your organization's) name.
