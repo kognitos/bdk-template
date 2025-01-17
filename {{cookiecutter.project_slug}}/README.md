@@ -90,8 +90,7 @@ docker build -t {{ cookiecutter.project_slug }}:<VERSION> .
 ## Running Docker image locally for testing (using ngrok)
 You can run the image locally, and use ngrok to make your image routable from the playground:
 
-- You need to install [ngrok](https://ngrok.com/) locally.
-- You need an [ngrok](https://ngrok.com/) account, and you have to set up an API KEY (The free tier is enough).
+- You need to install and configure [ngrok](https://ngrok.com/) (you need an account, and you have to set up an API KEY. The free tier is enough).
 
 After that, you just need to run the docker image using the ngrok mode:
 
