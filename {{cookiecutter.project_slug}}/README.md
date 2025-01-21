@@ -80,28 +80,35 @@ This script automatically generates a comprehensive USAGE.md file from the docst
 poetry run doc
 ```
 
-## Building Docker image using BDK Runtime
-In order to deploy the book, a docker image must be build that wraps the book with the BDK runtime:
-
-```shell
-docker build -t {{ cookiecutter.project_slug }}:<VERSION> .
-```
-
-## Running Docker image locally for testing (using ngrok)
+## Running locally for testing (using docker and ngrok)
 You can run the image locally, and use ngrok to make your image routable from the playground:
 
+- You need to install [docker](https://www.docker.com) if you haven't already.
 - You need to install and configure [ngrok](https://ngrok.com/) (you need an account, and you have to set up an API KEY. The free tier is enough).
 
-After that, you just need to run the docker image using the ngrok mode:
+After that, you need to configure ngrok api key as an environment variable:
 
 ```shell
-docker run -e BDK_SERVER_MODE=ngrok -e NGROK_AUTHTOKEN=<YOUR_API_KEY> {{ cookiecutter.project_slug }}:<VERSION>
+export NGROK_AUTHTOKEN=<YOUR_API_KEY>
+```
+
+Finally, run the poetry script to host the book locally:
+
+```shell
+poetry run host
 ```
 
 When you run this, you are going to see some logs. One of which contains the ngrok address: `listening on https://<SOME_UUID>.ngrok-free.app`. You need to copy this url and paste it on your kognitos playground using the learn command like this:
 
 ```
 learn "https://5aad-186-127-136-101.ngrok-free.app"
+```
+
+## Building Docker image
+In order to deploy the book, a docker image must be build that wraps the book with the BDK runtime:
+
+```shell
+docker build -t {{ cookiecutter.project_slug }}:<VERSION> .
 ```
 
 ## Deploying the Docker image
