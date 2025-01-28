@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/kognitos/bdk-template/compare/v1.0.2...v1.0.3) (2025-01-28)
+
+### Bug Fixes
+
+* fixed poetry script ([#20](https://github.com/kognitos/bdk-template/issues/20)) ([487c753](https://github.com/kognitos/bdk-template/commit/487c753cce07b7bd5f358ba0d66a8a957a969d75))
+
 ## [1.0.2](https://github.com/kognitos/bdk-template/compare/v1.0.1...v1.0.2) (2025-01-28)
 
 ### Bug Fixes
