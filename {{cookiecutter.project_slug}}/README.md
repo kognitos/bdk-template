@@ -48,9 +48,12 @@ or
 
 - Manually activating the venv:
   ```
-  source <path_to_your_venv>/bin/activate
+  # Mac or Linux
+  $(poetry env activate)
+
+  # Windows PowerShell
+  Invoke-Expression (poetry env activate)
   ```
-    If the venv was created locally in-project, run `source .venv/bin/activate`. Otherwise, look at where the env was created when you ran `poetry env use 3.11`.
 
 ## Running Tests
 This book uses Pytest as its test runner. You can execute it using the following command:
