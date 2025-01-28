@@ -10,7 +10,7 @@ def run_tests():
 
 def run_format():
     # format all files in-place
-    return run_cmd("poetry run black src tests")
+    run_cmd("poetry run black src tests")
     # organize imports
     return run_cmd("poetry run isort src tests")
 
