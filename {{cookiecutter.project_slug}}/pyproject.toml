@@ -32,6 +32,7 @@ format = "poetry_scripts:run_format"
 lint = "poetry_scripts:run_lint"
 type-check = "poetry_scripts:run_type_check"
 doc = "poetry_scripts:run_doc"
+host = "poetry_scripts:run_host"
 
 [build-system]
 requires = ["poetry-core"]
