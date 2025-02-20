@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/kognitos/bdk-template/compare/v1.0.3...v1.0.4) (2025-02-20)
+
+### Bug Fixes
+
+* added host script ([#21](https://github.com/kognitos/bdk-template/issues/21)) ([2583348](https://github.com/kognitos/bdk-template/commit/258334889d3be34e02085705633a5b4db8adb4e2))
+
 ## [1.0.3](https://github.com/kognitos/bdk-template/compare/v1.0.2...v1.0.3) (2025-01-28)
 
 ### Bug Fixes
