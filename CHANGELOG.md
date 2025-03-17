@@ -1,3 +1,9 @@
+## [1.0.8](https://github.com/kognitos/bdk-template/compare/v1.0.7...v1.0.8) (2025-03-17)
+
+### Bug Fixes
+
+* fixed connect method ([#25](https://github.com/kognitos/bdk-template/issues/25)) ([265d82d](https://github.com/kognitos/bdk-template/commit/265d82dfbb1b8d0d53f2ba635600e0f12d3dc6d5))
+
 ## [1.0.7](https://github.com/kognitos/bdk-template/compare/v1.0.6...v1.0.7) (2025-03-17)
 
 ### Bug Fixes
