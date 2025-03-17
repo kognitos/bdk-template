@@ -80,7 +80,7 @@ class {{ cookiecutter.__book_class_name }}:
             api_key: API Key
         
         Example:
-            >>> connect {{cookiecutter.project_name | replace('_', ' ')}} via api keys with
+            >>> connect {{cookiecutter.project_slug | replace('_', ' ')}} book via api keys with
                     the api key is "my_api_key"
         """
         test_url = f"{self._base_url}?appid={api_key}&q=London"
