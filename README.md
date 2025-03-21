@@ -27,7 +27,7 @@ pip install cookiecutter
 To generate a new project using this template, run:
 
 ```bash
-cookiecutter  git+ssh://git@github.com/kognitos/bdk-template.git
+cookiecutter git+ssh://git@github.com/kognitos/bdk-template.git
 ```
 
 You will be prompted to enter values for various configuration options (e.g., project name, 
@@ -40,6 +40,7 @@ The following options are available when generating a project from this template
 
 * *project_name*: The name of your project (default: "Sample Book").
 * *project_slug*: A URL-friendly version of the project name, usually derived automatically from the project name.
+* *project_folder_name*: The name of your project folder, follows the convention `book-<book-name>`.
 * *project_description*: A short description of your project.
 * *author_name*: Your (or your organization's) name.
 * *initial_version*: Initial project version.
