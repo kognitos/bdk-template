@@ -1,6 +1,9 @@
 import subprocess
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 def run_cmd(cmd):
     return subprocess.run(cmd, shell=True, env=os.environ.copy()).returncode
 
