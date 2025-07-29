@@ -1,3 +1,11 @@
+## [1.0.9](https://github.com/kognitos/bdk-template/compare/v1.0.8...v1.0.9) (2025-07-29)
+
+### Bug Fixes
+
+* added dotenv ([#27](https://github.com/kognitos/bdk-template/issues/27)) ([09678e1](https://github.com/kognitos/bdk-template/commit/09678e19599fec9748b5d26fd31abc9420e49fde))
+* fixed project slug ([#26](https://github.com/kognitos/bdk-template/issues/26)) ([cc7b1da](https://github.com/kognitos/bdk-template/commit/cc7b1daa9b4e7877b7ee0918461b58d221778426))
+* **INT-762:** fix host cmd ([#28](https://github.com/kognitos/bdk-template/issues/28)) ([b9a0053](https://github.com/kognitos/bdk-template/commit/b9a00533eed9168e0b3b0c709aee8e608d418304))
+
 ## [1.0.8](https://github.com/kognitos/bdk-template/compare/v1.0.7...v1.0.8) (2025-03-17)
 
 ### Bug Fixes
