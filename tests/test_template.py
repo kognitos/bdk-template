@@ -6,7 +6,7 @@ from generate_project import generate_project
 
 PROJECT_SLUG = "test_project"
 PROJECT_NAME = "Test Project"
-PROJECT_CLASS = "TestProject"
+PROJECT_CLASS = "TestProjectBook"
 
 
 @pytest.mark.parametrize(

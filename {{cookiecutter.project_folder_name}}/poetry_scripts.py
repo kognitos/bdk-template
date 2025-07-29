@@ -36,4 +36,4 @@ def run_host():
     ngrok_token = os.getenv("NGROK_AUTHTOKEN")
     if not ngrok_token:
         raise ValueError("Missing NGROK api key")
-    run_cmd(f"docker run --rm -e BDK_SERVER_MODE=ngrok -e NGROK_AUTHTOKEN={ngrok_token} {image_tag}")
+    run_cmd(f"docker run --rm -e BDK_SERVER_MODE=book -e BDK_TRANSPORT_MODE=ngrok -e NGROK_AUTHTOKEN={ngrok_token} {image_tag}")
