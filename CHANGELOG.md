@@ -1,3 +1,9 @@
+## [1.0.10](https://github.com/kognitos/bdk-template/compare/v1.0.9...v1.0.10) (2025-08-01)
+
+### Bug Fixes
+
+* ignore no else-return/raise to lint disables ([#29](https://github.com/kognitos/bdk-template/issues/29)) ([37823da](https://github.com/kognitos/bdk-template/commit/37823da29f8a5a2720345cb39bdc86d96a8b9c33))
+
 ## [1.0.9](https://github.com/kognitos/bdk-template/compare/v1.0.8...v1.0.9) (2025-07-29)
 
 ### Bug Fixes
