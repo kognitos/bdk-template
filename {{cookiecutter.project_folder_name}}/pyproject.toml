@@ -52,7 +52,9 @@ disable = [
     "too-many-instance-attributes",
     "duplicate-code",
     "too-many-public-methods",
-    "too-many-lines"
+    "too-many-lines",
+    "no-else-return",
+    "no-else-raise"
 ]
 
 [tool.poetry.plugins."kognitos-book"]
