@@ -25,8 +25,10 @@ pyright = "^1.1.360"
 python-dotenv = "^1.0.1"
 requests-mock = "^1.11.0"
 kognitos-bdk-linter = "^1.12"
+syrupy = "^4.9.1"
 
 [tool.poetry.scripts]
+test="poetry_scripts:run_test"
 tests = "poetry_scripts:run_tests"
 format = "poetry_scripts:run_format"
 lint = "poetry_scripts:run_lint"
