@@ -1,3 +1,11 @@
+## [1.1.0](https://github.com/kognitos/bdk-template/compare/v1.0.10...v1.1.0) (2025-08-21)
+
+### Features
+
+* add cspell.json file as a default config for cspell ([98bcefa](https://github.com/kognitos/bdk-template/commit/98bcefa67a58305006e34e85016380aa8501d60e))
+* add script for running a single test with options ([cb2dcd6](https://github.com/kognitos/bdk-template/commit/cb2dcd69feb3358898672ab72c35847869acbfe5))
+* remove poetry bdk plugin from template ([636ef22](https://github.com/kognitos/bdk-template/commit/636ef22901b5628004dd0983d7cb3b7ef8678240))
+
 ## [1.0.10](https://github.com/kognitos/bdk-template/compare/v1.0.9...v1.0.10) (2025-08-01)
 
 ### Bug Fixes
