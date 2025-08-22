@@ -74,7 +74,10 @@ def run_host():
     # build and run docker image
     image_tag = "{{ cookiecutter.project_slug }}:local_test"
     run_cmd(f"docker build -t {image_tag} .")
-    ngrok_token = os.getenv("NGROK_AUTHTOKEN")
-    if not ngrok_token:
+    if not (ngrok_token := os.getenv("NGROK_AUTHTOKEN")):
         raise ValueError("Missing NGROK api key")
-    run_cmd(f"docker run --rm -e BDK_SERVER_MODE=book -e BDK_TRANSPORT_MODE=ngrok -e NGROK_AUTHTOKEN={ngrok_token} {image_tag}")
+    cmd = f"docker run --rm -e BDK_SERVER_MODE=book -e BDK_TRANSPORT_MODE=ngrok -e NGROK_AUTHTOKEN={ngrok_token}"
+    if ngrok_domain := os.getenv("BDK_NGROK_DOMAIN"):
+        cmd += f" -e BDK_NGROK_DOMAIN={ngrok_domain}"
+    cmd += f" {image_tag}"
+    run_cmd(cmd)
