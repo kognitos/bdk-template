@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/kognitos/bdk-template/compare/v1.1.0...v1.1.1) (2025-08-22)
+
+### Bug Fixes
+
+* updated run host ([#31](https://github.com/kognitos/bdk-template/issues/31)) ([2617f8f](https://github.com/kognitos/bdk-template/commit/2617f8f465ce16cefb48714b38ce77d82203914f))
+
 ## [1.1.0](https://github.com/kognitos/bdk-template/compare/v1.0.10...v1.1.0) (2025-08-21)
 
 ### Features
