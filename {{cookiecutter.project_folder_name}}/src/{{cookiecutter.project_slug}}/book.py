@@ -68,7 +68,7 @@ class {{ cookiecutter.__book_class_name }}:
             raise ValueError("timeout must be positive")
         self._timeout = timeout
 
-    @connect(noun_phrase="api keys")
+    @connect(noun_phrase="api keys", name="Api Keys")
     def connect(self, api_key: str):
         """
         Connects to an API using the provided API key.
