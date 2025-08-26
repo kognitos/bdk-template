@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/kognitos/bdk-template/compare/v1.1.1...v1.1.2) (2025-08-26)
+
+### Bug Fixes
+
+* fixed connect in template book and added tests that run tests ([9169549](https://github.com/kognitos/bdk-template/commit/9169549a8f6a368e4107c65abf60db5cb3b8a83c))
+
 ## [1.1.1](https://github.com/kognitos/bdk-template/compare/v1.1.0...v1.1.1) (2025-08-22)
 
 ### Bug Fixes
