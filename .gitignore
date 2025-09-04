@@ -170,3 +170,5 @@ cython_debug/
 # Terraform
 **/.terraform.lock.hcl
 **/.terraform
+
+.envrc

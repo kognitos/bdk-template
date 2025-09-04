@@ -5,7 +5,7 @@ description = "A cookiecutter template for developing Kognitos Books"
 authors = ["Emiliano Lesende <emiliano@kognitos.com>"]
 readme = "README.md"
 package-mode = false
-packages = [{include = "*.py", from="."}]
+packages = [{ include = "*.py", from = "." }]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
@@ -18,8 +18,8 @@ isort = "^5.13.2"
 black = "^24.2.0"
 pre-commit = "^3.6.2"
 twine = "^5.0.0"
-kognitos-bdk-api = "^1.12"
-kognitos-bdk-linter = "^1.12"
+kognitos-bdk-api = "^1.23"
+kognitos-bdk-linter = "^1.25"
 kognitos-bdk-klang = "^2.2"
 
 [tool.poetry.scripts]

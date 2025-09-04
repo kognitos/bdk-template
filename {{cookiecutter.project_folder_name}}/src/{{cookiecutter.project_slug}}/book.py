@@ -7,7 +7,7 @@ from typing import Optional
 from urllib.parse import quote
 
 import requests
-from kognitos.bdk.api import NounPhrase
+from kognitos.bdk.api import ConnectionRequired, NounPhrase
 from kognitos.bdk.decorators import book, connect, procedure
 from requests import HTTPError
 
@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-@book(icon="data/icon.svg")
+@book(icon="data/icon.svg", name="{{ cookiecutter.project_name }}", tags=["Example"])
 class {{ cookiecutter.__book_class_name }}:
     """
     A book for {{cookiecutter.project_description}}
@@ -140,7 +140,7 @@ class {{ cookiecutter.__book_class_name }}:
             logger.error("error occurred: %s", e)
             raise
 
-    @procedure("to capitalize a (string)", connection_required=False)
+    @procedure("to capitalize a (string)", connection_required=ConnectionRequired.NEVER)
     def capitalize_string(self, string: str) -> str:
         """
         Capitalizes the input string.
@@ -152,9 +152,9 @@ class {{ cookiecutter.__book_class_name }}:
             the string: The capitalized string.
 
         Example 1:
-            Capitalize the string "thomas"
+            Capitalize the string "tomas"
 
-            >>> capitalize "thomas"
+            >>> capitalize "tomas"
 
         Example 2:
             Capitalize the string "matias"
