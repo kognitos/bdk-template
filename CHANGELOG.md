@@ -1,3 +1,9 @@
+## [1.1.3](https://github.com/kognitos/bdk-template/compare/v1.1.2...v1.1.3) (2025-09-05)
+
+### Bug Fixes
+
+* improve run host to use cached dependencies ([35bf81c](https://github.com/kognitos/bdk-template/commit/35bf81c4b951f25db9b60a5cd4b40d4a386f41f4))
+
 ## [1.1.2](https://github.com/kognitos/bdk-template/compare/v1.1.1...v1.1.2) (2025-08-26)
 
 ### Bug Fixes
