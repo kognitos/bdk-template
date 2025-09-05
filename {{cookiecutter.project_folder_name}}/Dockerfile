@@ -49,7 +49,8 @@ RUN /poetry/bin/poetry build -f wheel -n \
 # Final image
 FROM ${BDK_RUNTIME_IMAGE_URI}
 
-ENV BDK_SERVER_MODE=http
+ENV BDK_SERVER_MODE=book
+ENV BDK_SERVER_TRANSPORT=http
 ENV BDK_HTTP_PORT=20996
 ENV OTEL_SDK_DISABLED=true
 
