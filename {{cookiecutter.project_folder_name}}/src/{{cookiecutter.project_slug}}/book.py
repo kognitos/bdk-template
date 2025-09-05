@@ -7,7 +7,7 @@ from typing import Optional
 from urllib.parse import quote
 
 import requests
-from kognitos.bdk.api import NounPhrase
+from kognitos.bdk.api import ConnectionRequired, NounPhrase
 from kognitos.bdk.decorators import book, connect, procedure
 from requests import HTTPError
 
@@ -140,7 +140,7 @@ class {{ cookiecutter.__book_class_name }}:
             logger.error("error occurred: %s", e)
             raise
 
-    @procedure("to capitalize a (string)", connection_required=False)
+    @procedure("to capitalize a (string)", connection_required=ConnectionRequired.NEVER)
     def capitalize_string(self, string: str) -> str:
         """
         Capitalizes the input string.
