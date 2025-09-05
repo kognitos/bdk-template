@@ -31,4 +31,6 @@ def generate_project(request, tmpdir):
         extra_context=request.param,
         output_dir=output_dir,
     )
-    return os.path.join(output_dir, "book-" + request.param["project_slug"].replace("_", "-"))
+    return os.path.join(
+        output_dir, "book-" + request.param["project_slug"].replace("_", "-")
+    )

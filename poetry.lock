@@ -685,18 +685,19 @@ type = ["pygobject-stubs", "pytest-mypy", "shtab", "types-pywin32"]
 
 [[package]]
 name = "kognitos-bdk-api"
-version = "1.12.4"
+version = "1.23.7"
 description = "Kognitos Book Development Kit"
 optional = false
 python-versions = "<4.0,>=3.11"
 files = [
-    {file = "kognitos_bdk_api-1.12.4-py3-none-any.whl", hash = "sha256:43e3eb5a2310e7941099c6e0fc06fb1605d9739d162974e66fe8b7fb932a01c0"},
-    {file = "kognitos_bdk_api-1.12.4.tar.gz", hash = "sha256:320ff5903ba6c209fc18c557f3e22cd2dbe25da379908a4e51e88c5355628a3d"},
+    {file = "kognitos_bdk_api-1.23.7-py3-none-any.whl", hash = "sha256:3580e47044c18fc37b49bbaeaa4c0e11440286fa5f11cbb72ba139418e0adbe1"},
+    {file = "kognitos_bdk_api-1.23.7.tar.gz", hash = "sha256:d970a46bf9c7417b6fda925d7716e0b7f5602c1e1b7a5a0afceb6db3e4ddcff6"},
 ]
 
 [package.dependencies]
 docstring-parser = ">=0.15,<0.16"
 kognitos-bdk-klang = ">=2.0.0,<3.0.0"
+uritemplate = ">=4.1.1,<5.0.0"
 
 [package.extras]
 attrs = ["attrs (>=24.2.0,<25.0.0)"]
@@ -714,19 +715,21 @@ files = [
 
 [[package]]
 name = "kognitos-bdk-linter"
-version = "1.12.4"
+version = "1.25.0"
 description = "Kognitos BDK Linter"
 optional = false
 python-versions = "<4.0,>=3.11"
 files = [
-    {file = "kognitos_bdk_linter-1.12.4-py3-none-any.whl", hash = "sha256:21aa4e1b5026c0be3eaface984b81d340672721a43e40471b5ffbab20f9bcabe"},
-    {file = "kognitos_bdk_linter-1.12.4.tar.gz", hash = "sha256:f3fe8ce8e225912474587b4d2dbb05e34a27c97f78eb5e01ed874cdb01106146"},
+    {file = "kognitos_bdk_linter-1.25.0-py3-none-any.whl", hash = "sha256:1db594ba561bde052c686846d04eab4f1c565deca33e2838982492bdd4a71c1f"},
+    {file = "kognitos_bdk_linter-1.25.0.tar.gz", hash = "sha256:f847ae4afce1e696a8065a7e87ce21d91e2fbc95037d9a456f9491ac005d47fb"},
 ]
 
 [package.dependencies]
-kognitos-bdk-api = ">=1.7.4,<2.0.0"
+kognitos-bdk-api = ">=1.23.7,<2.0.0"
 kognitos-bdk-klang = ">=2.0.0,<3.0.0"
 pylint = ">=3.0,<4.0"
+toml = ">=0.10.2,<0.11.0"
+uritemplate = ">=4.1.1,<5.0.0"
 
 [[package]]
 name = "markdown-it-py"
@@ -1295,6 +1298,17 @@ files = [
 ]
 
 [[package]]
+name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+files = [
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+    {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+
+[[package]]
 name = "tomlkit"
 version = "0.13.2"
 description = "Style preserving TOML library"
@@ -1336,6 +1350,17 @@ python-versions = ">=3.8"
 files = [
     {file = "types_python_dateutil-2.9.0.20241206-py3-none-any.whl", hash = "sha256:e248a4bc70a486d3e3ec84d0dc30eec3a5f979d6e7ee4123ae043eedbb987f53"},
     {file = "types_python_dateutil-2.9.0.20241206.tar.gz", hash = "sha256:18f493414c26ffba692a72369fea7a154c502646301ebfe3d56a04b3767284cb"},
+]
+
+[[package]]
+name = "uritemplate"
+version = "4.2.0"
+description = "Implementation of RFC 6570 URI Templates"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "uritemplate-4.2.0-py3-none-any.whl", hash = "sha256:962201ba1c4edcab02e60f9a0d3821e82dfc5d2d6662a21abd533879bdb8a686"},
+    {file = "uritemplate-4.2.0.tar.gz", hash = "sha256:480c2ed180878955863323eea31b0ede668795de182617fef9c6ca09e6ec9d0e"},
 ]
 
 [[package]]
@@ -1397,4 +1422,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.11,<4.0"
-content-hash = "42afdd9a9b1b120e53926b0b6b24ef5109fa82d8748e2977632ca0ab6b27f589"
+content-hash = "d3a94c6a8d0c617daa7d6dbff58f90867e20bdb11c798f9f54267e0cdd1ca1ec"
