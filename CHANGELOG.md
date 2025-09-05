@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/kognitos/bdk-template/compare/v1.1.3...v1.1.4) (2025-09-05)
+
+### Bug Fixes
+
+* fixed template requires_connection usage ([35e2022](https://github.com/kognitos/bdk-template/commit/35e202225ad44b16709715ce78a1efa52a6a8636))
+* update env vars in dockerfile ([24525a7](https://github.com/kognitos/bdk-template/commit/24525a7c2514764f6b9c794b624f0e8821ba0656))
+
 ## [1.1.3](https://github.com/kognitos/bdk-template/compare/v1.1.2...v1.1.3) (2025-09-05)
 
 ### Bug Fixes
