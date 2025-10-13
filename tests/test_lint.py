@@ -37,7 +37,7 @@ def run_pylint(project_directory):
 def test_pylint_passes(generate_project):
     pylint_score, pylint_messages = run_pylint(generate_project)
 
-    # Check if pylint passed based on your criteria, for example, a score of 8.0+
+    # Check if pylint passed
     assert (
-        pylint_score >= 8.0
+        pylint_score == 10.0
     ), f"Pylint failed with score {pylint_score}\n{pylint_messages}"
