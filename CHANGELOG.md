@@ -1,3 +1,9 @@
+## [1.1.5](https://github.com/kognitos/bdk-template/compare/v1.1.4...v1.1.5) (2025-10-14)
+
+### Bug Fixes
+
+* fixed all docstring issues ([941a214](https://github.com/kognitos/bdk-template/commit/941a214191108069eaaf76db7e10585add21bb03))
+
 ## [1.1.4](https://github.com/kognitos/bdk-template/compare/v1.1.3...v1.1.4) (2025-09-05)
 
 ### Bug Fixes
