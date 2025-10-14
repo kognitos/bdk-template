@@ -1,6 +1,4 @@
-"""
-{{cookiecutter.project_description}}
-"""
+"""{{cookiecutter.project_description}}"""
 
 import logging
 from typing import Optional
@@ -21,16 +19,14 @@ logger = logging.getLogger(__name__)
 
 @book(icon="data/icon.svg", name="{{ cookiecutter.project_name }}", tags=["Example"])
 class {{ cookiecutter.__book_class_name }}:
-    """
-    A book for {{cookiecutter.project_description}}
+    """A book for {{cookiecutter.project_description}}
 
     Author:
       {{cookiecutter.author_name}}
     """
 
     def __init__(self):
-        """
-        Initializes an instance of the class.
+        """Initializes an instance of the class.
 
         :param self: The instance of the class.
         """
@@ -40,8 +36,7 @@ class {{ cookiecutter.__book_class_name }}:
 
     @property
     def timeout(self) -> float:
-        """
-        Get the value of the timeout.
+        """Get the value of the timeout.
 
         Parameters:
             None
@@ -54,8 +49,7 @@ class {{ cookiecutter.__book_class_name }}:
 
     @timeout.setter
     def timeout(self, timeout: float):
-        """
-        Sets the timeout value in milliseconds.
+        """Sets the timeout value in milliseconds.
 
         Args:
             timeout (int): The timeout value to set. Must be a positive integer.
@@ -70,8 +64,7 @@ class {{ cookiecutter.__book_class_name }}:
 
     @connect(noun_phrase="api keys", name="Api Keys")
     def connect(self, api_key: str):
-        """
-        Connects to an API using the provided API key.
+        """Connects to an API using the provided API key.
 
         Arguments:
             api_key: The API key to be used for connecting
@@ -96,8 +89,7 @@ class {{ cookiecutter.__book_class_name }}:
     def current_temperature(
         self, city: NounPhrase, unit: Optional[NounPhrase] = NounPhrase("metric")
     ) -> float:
-        """
-        Fetch the current temperature for a specified city.
+        """Fetch the current temperature for a specified city.
 
         Input Concepts:
             the city: The name of the city. Please refer to ISO 3166 for the state codes or country codes.
@@ -142,8 +134,7 @@ class {{ cookiecutter.__book_class_name }}:
 
     @procedure("to capitalize a (string)", connection_required=ConnectionRequired.NEVER)
     def capitalize_string(self, string: str) -> str:
-        """
-        Capitalizes the input string.
+        """Capitalizes the input string.
 
         Input Concepts:
             the string: The string value you want to capitalize.
