@@ -19,7 +19,8 @@ logger = logging.getLogger(__name__)
 
 @book(icon="data/icon.svg", name="{{ cookiecutter.project_name }}", tags=["Example"])
 class {{ cookiecutter.__book_class_name }}:
-    """{{cookiecutter.project_description}}
+    """
+    {{cookiecutter.project_description}}
 
     Author:
       {{cookiecutter.author_name}}
