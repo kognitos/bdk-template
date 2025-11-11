@@ -1,6 +1,7 @@
 import argparse
 import hashlib
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
