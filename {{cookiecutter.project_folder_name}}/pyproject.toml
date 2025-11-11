@@ -6,6 +6,9 @@ authors = ["{{ cookiecutter.author_name }}"]
 readme = "README.md"
 packages = [{ include = "{{ cookiecutter.project_slug }}", from = "src" }]
 
+[environment]
+bdk_runtime_version = "{{ cookiecutter.bdk_runtime_version }}"
+
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 

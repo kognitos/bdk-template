@@ -1,5 +1,5 @@
 # BDK Runtime Version
-ARG BDK_RUNTIME_IMAGE_URI="kognitosinc/bdk:latest"
+ARG BDK_RUNTIME_IMAGE_URI="kognitosinc/bdk:{{ cookiecutter.bdk_runtime_version }}"
 
 # BDK Runtime Base Image
 FROM ${BDK_RUNTIME_IMAGE_URI} AS builder

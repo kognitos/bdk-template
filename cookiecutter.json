@@ -5,6 +5,7 @@
   "project_description": "A short description of the project.",
   "author_name": "Kognitos",
   "initial_version": "0.1.0",
+  "bdk_runtime_version": "latest",
   "__book_class_name": "{{ cookiecutter.project_name.replace(' ', '_').replace('-', '_') | remove_book_prefix() | split_by('_') | select() | soft_capitalize() | join('') | ensure_ends_with_book() }}",
   "__base_url_name": "{{ cookiecutter.project_slug.upper() }}_BASE_URL",
   "_extensions": ["custom_filters.CustomFiltersExtension"]
