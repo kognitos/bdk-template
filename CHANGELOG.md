@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/kognitos/bdk-template/compare/v1.1.7...v1.1.8) (2025-11-11)
+
+### Bug Fixes
+
+* added regex import to poetry scripts ([d454f8d](https://github.com/kognitos/bdk-template/commit/d454f8dbd8ba862051eba7f2549d4e9993635727))
+* reverted style change ([7cd57b5](https://github.com/kognitos/bdk-template/commit/7cd57b52172ec574cfd4a807d10c66f5412e0b3b))
+
 ## [1.1.7](https://github.com/kognitos/bdk-template/compare/v1.1.6...v1.1.7) (2025-11-11)
 
 ### Bug Fixes
