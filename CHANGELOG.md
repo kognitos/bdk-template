@@ -1,3 +1,9 @@
+## [1.1.7](https://github.com/kognitos/bdk-template/compare/v1.1.6...v1.1.7) (2025-11-11)
+
+### Bug Fixes
+
+* updated template ([dd6b44c](https://github.com/kognitos/bdk-template/commit/dd6b44cf3f72fe283fe7d6e9abbce81cdc553c2c))
+
 ## [1.1.6](https://github.com/kognitos/bdk-template/compare/v1.1.5...v1.1.6) (2025-11-11)
 
 ### Bug Fixes
