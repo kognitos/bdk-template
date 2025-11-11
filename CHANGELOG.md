@@ -1,3 +1,9 @@
+## [1.1.6](https://github.com/kognitos/bdk-template/compare/v1.1.5...v1.1.6) (2025-11-11)
+
+### Bug Fixes
+
+* book description ([29ac4b1](https://github.com/kognitos/bdk-template/commit/29ac4b129460f3e26a27bd12137aaaf3ac447900))
+
 ## [1.1.5](https://github.com/kognitos/bdk-template/compare/v1.1.4...v1.1.5) (2025-10-14)
 
 ### Bug Fixes
