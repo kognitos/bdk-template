@@ -63,7 +63,7 @@ class {{ cookiecutter.__book_class_name }}:
         self._timeout = timeout
 
     @connect(noun_phrase="api keys", name="Api Keys")
-    def connect(self, api_key: str):
+    def connect(self, api_key: str, verify: bool = False):
         """Connects to an API using the provided API key.
 
         Arguments:
@@ -76,16 +76,18 @@ class {{ cookiecutter.__book_class_name }}:
             >>> connect {{cookiecutter.project_slug | replace('_', ' ')}} book via api keys with
                     the api key is "my_api_key"
         """
-        test_url = f"{self._base_url}?appid={api_key}&q=London"
-        response = requests.get(test_url, timeout=self._timeout)
-        if response.status_code == 401:
-            response_data = response.json()
-            if "Invalid API key" in response_data.get("message", ""):
-                raise ValueError("Invalid API key")
-
         self._api_key = api_key
 
-    @procedure("to get the (current temperature) at a city")
+        if verify:
+            test_url = f"{self._base_url}?appid={self._api_key}&q=London"
+            response = requests.get(test_url, timeout=self._timeout)
+            if response.status_code == 401:
+                response_data = response.json()
+                if "Invalid API key" in response_data.get("message", ""):
+                    raise ValueError("Invalid API key")
+
+
+    @procedure("to get the (current temperature) at a city", is_mutation=False)
     def current_temperature(
         self, city: NounPhrase, unit: Optional[NounPhrase] = NounPhrase("metric")
     ) -> float:
@@ -132,7 +134,7 @@ class {{ cookiecutter.__book_class_name }}:
             logger.error("error occurred: %s", e)
             raise
 
-    @procedure("to capitalize a (string)", connection_required=ConnectionRequired.NEVER)
+    @procedure("to capitalize a (string)", connection_required=ConnectionRequired.NEVER, is_mutation=False)
     def capitalize_string(self, string: str) -> str:
         """Capitalizes the input string.
 
